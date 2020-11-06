@@ -37,9 +37,6 @@ public class MainActivity extends AppCompatActivity {
 //         populate RV with friends(if any)
         friends = dbhandler.getAllFriends();
 
-        // made a mistake here when attempting to make fields unique
-//        dbhandler.dropTable("FRIENDUNIQUE");
-
         RecyclerView rvFriends = (RecyclerView) findViewById(R.id.rvFriends);
         FriendAdapter adapter = new FriendAdapter(friends, this);
         rvFriends.setAdapter(adapter);
